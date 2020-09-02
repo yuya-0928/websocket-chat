@@ -4,6 +4,9 @@ ActionCableを使用したライブチャットアプリを実装
 
 https://techtechmedia.com/action-cable-rails6/
 
+rails5なので途中からこちらを参照
+https://qiita.com/kskumgk63/items/660d76488659ee6da350
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
