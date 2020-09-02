@@ -1,5 +1,9 @@
 # README
 
+ActionCableを使用したライブチャットアプリを実装
+
+https://techtechmedia.com/action-cable-rails6/
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
