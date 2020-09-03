@@ -1,7 +1,19 @@
+<!--
 <h1>Chat room</h1>
 <div id="messages">
     <%= render @messages %>
 </div>
+<form>
+    <label>Say something:</label><br>
+    <input type="text" data-behavior="room_speaker">
+</form>
+-->
+<div id='messages' data-room_id="<%= @room.id %>">
+    <%= render @messages %>
+</div>
+
+<%# label_tag :content, 'Say something' %>
+<%# text_field_tag :content, nil, data: { behabior: 'room_speaker' } %>
 <form>
     <label>Say something:</label><br>
     <input type="text" data-behavior="room_speaker">

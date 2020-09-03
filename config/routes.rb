@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
-  root to: 'rooms#show'
+  root to: 'rooms#index'
+
+  resources :rooms, only: %i[show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

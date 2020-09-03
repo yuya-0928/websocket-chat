@@ -13,6 +13,9 @@ https://qiita.com/hayabusa555/items/82d5c857db86accd0a0c
 Action Cableについて
 https://qiita.com/yokoto/items/fb1e66844b70f52682dd
 
+チャットルームを分ける機能
+https://qiita.com/eRy-sk/items/4c4e983e34a44c5ace27
+
 * versions
 vagrant centos/7
 ruby 2.5.7

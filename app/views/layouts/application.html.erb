@@ -17,6 +17,7 @@
         <%= link_to 'ログアウト', destroy_admin_session_path, method: :delete %>
         <% elsif user_signed_in? %>
         <%= current_user.email %>でログイン
+        <%= link_to 'チャットルーム一覧', root_path %>
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
         <% else %>
         <p>未ログイン</p>
