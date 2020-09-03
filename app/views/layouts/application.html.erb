@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>WebsocketChat</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
+    <header>
+        <% if admin_signed_in? %>
+        <p>管理者ログイン中</p>
+        <%= link_to 'ログアウト', destroy_admin_session_path, method: :delete %>
+        <% elsif user_signed_in? %>
+        <%= current_user.email %>でログイン
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        <% else %>
+        <p>未ログイン</p>
+        <%= link_to 'ログイン', new_user_session_path %>
+        <%= link_to '新規登録', new_user_registration_path %>
+        <% end %>
+    </header>
     <%= yield %>
-  </body>
+</body>
+
 </html>
