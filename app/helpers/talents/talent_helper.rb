@@ -1,0 +1,2 @@
+module Talents::TalentHelper
+end

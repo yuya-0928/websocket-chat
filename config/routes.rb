@@ -9,6 +9,11 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
+  devise_for :talents, controllers:{
+    sessions: 'talents/sessions',
+    passwords: 'talents/passwords',
+    registrations: 'talents/registrations'
+  }
   root to: 'rooms#index'
 
   resources :rooms, only: %i[show]
