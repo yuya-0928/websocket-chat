@@ -19,6 +19,11 @@
         <%= current_user.email %>でログイン
         <%= link_to 'チャットルーム一覧', root_path %>
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        <% elsif talent_signed_in? %>
+        タレント<%= current_talent.email %>でログイン
+        <%= link_to 'チャットルーム一覧', root_path %>
+        <%= link_to 'タレントマイページ', talents_talent_path(current_talent) %>
+        <%= link_to 'ログアウト', destroy_talent_session_path, method: :delete %>
         <% else %>
         <p>未ログイン</p>
         <%= link_to 'ログイン', new_user_session_path %>

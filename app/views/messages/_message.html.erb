@@ -1,4 +1,8 @@
 <%# views/messages/_message.html.erb %>
 <div class="message">
+    <% if message.user.nil? %>
+    <p>☆タレント☆<%= "#{message.talent.name}:  #{message.content}" %></p>
+    <% else %>
     <p><%= "#{message.user.email}:  #{message.content}" %></p>
+    <% end %>
 </div>

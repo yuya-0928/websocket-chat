@@ -21,6 +21,11 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'warden'
 
+gem 'carrierwave'
+gem 'rmagick'
+
+gem 'pry-byebug'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

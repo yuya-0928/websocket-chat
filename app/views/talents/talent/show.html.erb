@@ -1,0 +1,19 @@
+<div class="talent-show">
+    <div class="talent-information">
+        <% if @talent.image? %>
+        <%= image_tag @talent.image.url %>
+        <% else %>
+        <% end %>
+        <h1><%= @talent.name %></h1>
+    </div>
+    <div>
+        <%= link_to  "タレント情報編集", edit_talents_talent_path(@talent.id) %>
+    </div>
+    <div>
+        <% if @talent.room.nil? %>
+        <%= link_to  "チャットルームを作成", rooms_path, method: :post %>
+        <% else %>
+        <p>チャットルーム作成ずみ</p>
+        <% end %>
+    </div>
+</div>
